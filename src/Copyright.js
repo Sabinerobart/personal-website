@@ -1,14 +1,24 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
 
-export default function Copyright() {
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '../mui-imports';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: 'absolute',
+    top: 70,
+    right: -50,
+    transform: 'rotate(-90deg)'
+  },
+}));
+
+export default function Copyright({ name }) {
+  const classes = useStyles();
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="caption" color="textSecondary" align="center" className={classes.root}>
       {'Copyright © '}
-      <MuiLink color="inherit" href="https://material-ui.com/">
-        Your Website
-      </MuiLink>{' '}
+      {name}
+      {', '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
