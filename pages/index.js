@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Grid } from '../mui-imports';
+import { Container, Button, Grid, Box } from '../mui-imports';
 
 import Link from '../src/Link';
 import styles from './styles.js';
@@ -8,26 +8,28 @@ export default function Index() {
   const classes = styles();
   return (
     <Container
-      maxWidth="md">
+      maxWidth="lg">
+
+      <Button
+        variant="contained"
+        color="secondary"
+        component={Link}
+        naked
+        href="/contact"
+        className={classes.homepageButton}
+      >
+        Contact
+      </Button>
       <Grid
         container
         direction="column"
-        justify="space-between"
+        justify="flex-end"
         className={classes.root}
       >
-        <div>
-          <Button
-            variant="contained"
-            color="primary"
-            component={Link}
-            naked
-            href="/contact"
-            className={classes.homepageButton}
-          >
-            Contact Me
-          </Button>
-        </div>
-        <input />
+        <div className={classes.resultCard}></div>
+        <Box className={classes.inputBox}>
+          <input type="textarea" className={classes.input} placeholder="Quelles compétences recherchez-vous ?" />
+        </Box>
       </Grid>
     </Container>
   );

@@ -6,9 +6,10 @@ import { Typography } from '../mui-imports';
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'absolute',
-    top: 70,
-    right: -50,
-    transform: 'rotate(-90deg)'
+    bottom: 90,
+    left: -75,
+    transform: 'rotate(90deg)',
+    fontFamily: 'Ovo'
   },
 }));
 
