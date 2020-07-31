@@ -6,9 +6,10 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#726AB0',
+      magenta: '#862c83',
     },
     secondary: {
-      main: '#862c83',
+      main: '#212121',
     },
     error: {
       main: red.A400,
@@ -19,8 +20,9 @@ const theme = createMuiTheme({
   },
   typography: {
     caption: {
-      fontSize: '0.65rem'
-    }
+      fontSize: '0.85rem'
+    },
+    fontFamily: "Tommy-Black"
   }
 });
 

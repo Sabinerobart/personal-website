@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import Copyright from '../src/Copyright';
+import '../styles/index.css';
 
 const MyApp = ({ Component, pageProps }) => {
   const title = "[Zb]+web";
